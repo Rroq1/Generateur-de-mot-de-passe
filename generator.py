@@ -1,14 +1,22 @@
 import random
 from tkinter import *
+import tkinter as tk
+import webbrowser
+
 
 # 1 : Création de la fenêtre Tkinter
+color="#8F8F8F"
 fenetre = Tk()
-fenetre.title("Générateur de mot de passe")
+fenetre.title("Générateur - Mot de passe")
+fenetre.config(background=color)
 fenetre.minsize(500, 300)
 
+def callback(url):
+    webbrowser.open_new(url)
+
 # 2 : Titre
-titre = Label(fenetre, text="Combien de caractères voulez-vous dans votre mot de passe ?")
-titre.pack()
+titre = Label(fenetre, text="Combien de caractères voulez-vous dans votre mot de passe ?",font=("Arial",12,"bold"),background=color)
+titre.pack(pady=20)
 
 # 3 : Champ pour entrer la longueur du mot de passe
 expression = StringVar()
@@ -47,7 +55,12 @@ def generer_mot_de_passe():
     except ValueError:
         resultat.set("Veuillez entrer un nombre valide.")
 
-bouton = Button(fenetre, text="Générer", command=generer_mot_de_passe)
+bouton = Button(fenetre, text="Générer", command=generer_mot_de_passe, cursor="hand2")
 bouton.pack(pady=10)
+
+
+link1 = Label(fenetre, text="Github", fg="blue", cursor="hand2", background=color)
+link1.pack(pady=100)
+link1.bind("<Button-1>", lambda e: callback("https://github.com/Rroq1"))
 
 fenetre.mainloop()
