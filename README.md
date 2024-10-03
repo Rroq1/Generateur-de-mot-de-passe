@@ -11,3 +11,6 @@
 - Random : cette bibliothèque Python permet de créer des programmes de manière aléatoire.
 - Tkinter : la bibliothèque Tkinter permet de créer une fenêtre tout en la personnalisant.
 - Webbrowser : elle permet de créer des liens cliquables sur notre fenêtre.
+
+## ⌛ Autres
+- Si vous voulez savoir comment j'ai construit ce programme, alors je vous invite à regarder le code pour en savoir davantage !
