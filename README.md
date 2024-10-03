@@ -3,7 +3,7 @@
 - 👋 Bonjour,
 - 📋 Ceci est un petit programme pour générer un mot de passe aléatoire !
 
-# Bibliothèques
+## Bibliothèques
 
 - Random : cette bibliothèque python permet de créer des programmes de manière aléatoire.
 - Tkinter : la bibliothèque Tkinter permet de créer une fenêtre tout en la personnalisant.
