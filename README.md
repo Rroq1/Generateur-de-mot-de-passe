@@ -1,6 +1,6 @@
 # 💼 Générateur de mot de passe
 
-###👋 Bonjour,
+👋 Bonjour,
 - Voici un petit programme Python permettant de générer des mots de passe de manière aléatoire ! Si vous souhaitez plus d'informations, veuillez regarder la suite de cette présentation.
 
 ## 📗 Objectif
