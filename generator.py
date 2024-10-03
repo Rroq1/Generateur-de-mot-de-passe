@@ -5,7 +5,7 @@ import webbrowser
 
 
 # 1 : Création de la fenêtre Tkinter
-color="#8F8F8F"
+color="#151515"
 fenetre = Tk()
 fenetre.title("Générateur - Mot de passe")
 fenetre.config(background=color)
@@ -15,12 +15,12 @@ def callback(url):
     webbrowser.open_new(url)
 
 # 2 : Titre
-titre = Label(fenetre, text="Combien de caractères voulez-vous dans votre mot de passe ?",font=("Arial",12,"bold"),background=color)
+titre = Label(fenetre, text="Combien de caractères voulez-vous dans votre mot de passe ?",font=("Arial",12,"bold"),fg="white",background=color)
 titre.pack(pady=20)
 
 # 3 : Champ pour entrer la longueur du mot de passe
 expression = StringVar()
-entree = Entry(fenetre, textvariable=expression, width=30)
+entree = Spinbox(fenetre, textvariable=expression, width=30, from_=0, to=100)
 entree.pack(pady=10)
 
 # 4 : Le label pour afficher le mot de passe généré
@@ -60,7 +60,7 @@ bouton.pack(pady=10)
 
 
 link1 = Label(fenetre, text="Github", fg="blue", cursor="hand2", background=color)
-link1.pack(pady=100)
+link1.pack(pady=50)
 link1.bind("<Button-1>", lambda e: callback("https://github.com/Rroq1"))
 
 fenetre.mainloop()
