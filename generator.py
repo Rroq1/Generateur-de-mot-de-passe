@@ -14,7 +14,7 @@ fenetre.minsize(500, 300)
 def callback(url):
     webbrowser.open_new(url)
 
-# 2 : Titre
+# 2 : Titre demandant combien de caractères veut l'utilisateur
 titre = Label(fenetre, text="Combien de caractères voulez-vous dans votre mot de passe ?",font=("Arial",12,"bold"),fg="white",background=color)
 titre.pack(pady=20)
 
@@ -55,12 +55,14 @@ def generer_mot_de_passe():
     except ValueError:
         resultat.set("Veuillez entrer un nombre valide.")
 
+# 6 : Bouton cliquable pour afficher le mot de passe généré dans le deuxième label
 bouton = Button(fenetre, text="Générer", command=generer_mot_de_passe, cursor="hand2")
 bouton.pack(pady=10)
 
-
+# 7 : Texte cliquable pour créditer mon github
 link1 = Label(fenetre, text="Github", fg="blue", cursor="hand2", background=color)
 link1.pack(pady=50)
 link1.bind("<Button-1>", lambda e: callback("https://github.com/Rroq1"))
 
+# 8 : Ce petit bout de programme permet d'afficher la fenêtre configuré au début du programme.
 fenetre.mainloop()
